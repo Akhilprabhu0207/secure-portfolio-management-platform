@@ -1,0 +1,1 @@
+package com.akhil.portfolio.user; public enum Role { USER, ADMIN }
