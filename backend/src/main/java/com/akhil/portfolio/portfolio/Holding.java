@@ -1,0 +1,3 @@
+package com.akhil.portfolio.portfolio;
+import jakarta.persistence.*; import jakarta.validation.constraints.*;
+@Entity @Table(name="holdings",indexes=@Index(name="idx_holding_symbol",columnList="symbol")) public class Holding { @Id @GeneratedValue(strategy=GenerationType.IDENTITY) Long id; @NotBlank @Size(max=12) String symbol; @Positive double quantity; @Positive double averagePrice; public Long getId(){return id;} public String getSymbol(){return symbol;} public double getQuantity(){return quantity;} public double getAveragePrice(){return averagePrice;} }
