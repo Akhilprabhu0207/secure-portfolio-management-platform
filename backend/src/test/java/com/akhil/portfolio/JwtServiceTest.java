@@ -1,0 +1,1 @@
+package com.akhil.portfolio; import com.akhil.portfolio.security.JwtService; import org.junit.jupiter.api.Test; import static org.junit.jupiter.api.Assertions.*; class JwtServiceTest { @Test void tokenRoundTrip(){var s=new JwtService("12345678901234567890123456789012",60000);assertEquals("akhil",s.subject(s.create("akhil")));} }
