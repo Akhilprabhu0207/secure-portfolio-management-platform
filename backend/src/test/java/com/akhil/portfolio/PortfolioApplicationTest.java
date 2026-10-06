@@ -1,0 +1,1 @@
+package com.akhil.portfolio; import org.junit.jupiter.api.Test; import static org.junit.jupiter.api.Assertions.*; class PortfolioApplicationTest{@Test void appClassExists(){assertNotNull(PortfolioApplication.class);}}
