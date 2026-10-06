@@ -1,0 +1,3 @@
+package com.akhil.portfolio.user;
+import jakarta.persistence.*;
+@Entity @Table(name="app_users") public class AppUser { @Id @GeneratedValue(strategy=GenerationType.IDENTITY) Long id; @Column(nullable=false,unique=true) String username; @Column(nullable=false) String password; @Enumerated(EnumType.STRING) Role role; protected AppUser(){} public AppUser(String u,String p,Role r){username=u;password=p;role=r;} public Long getId(){return id;} public String getUsername(){return username;} public String getPassword(){return password;} public Role getRole(){return role;} }
