@@ -1,0 +1,14 @@
+# Java
+**/target/
+*.class
+# Node
+frontend/node_modules/
+frontend/dist/
+playwright-report/
+test-results/
+# IDE
+.idea/
+.vscode/
+# Secrets
+.env
+*.pem
