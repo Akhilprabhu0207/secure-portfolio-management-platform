@@ -6,12 +6,17 @@ spring:
     username: ${DATABASE_USERNAME:portfolio}
     password: ${DATABASE_PASSWORD:portfolio}
   jpa:
-    hibernate:
-      ddl-auto: update
     open-in-view: false
+    hibernate:
+      ddl-auto: validate
+  flyway:
+    enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
 app:
-  jwt-secret: ${JWT_SECRET:development-secret-change-me-please-1234567890}
+  jwt-secret: ${JWT_SECRET:development-only-secret-must-be-at-least-32-bytes}
   jwt-expiration-ms: ${JWT_EXPIRATION_MS:3600000}
-
-app:
   frontend-origin: ${FRONTEND_ORIGIN:http://localhost:5173}
